@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Security Events Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>Logged Security Events</h1>
+    <table border="1">
+        <tr>
+            <th>Timestamp</th>
+            <th>ECU ID</th>
+            <th>Event Type</th>
+            <th>Severity</th>
+        </tr>
+        {% for event in events %}
+        <tr>
+            <td>{{ event.timestamp }}</td>
+            <td>{{ event.ecu_id }}</td>
+            <td>{{ event.event_type }}</td>
+            <td>{{ event.severity }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>

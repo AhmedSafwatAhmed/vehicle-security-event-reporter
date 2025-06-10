@@ -1,0 +1,5 @@
+{
+  "ENV": "development",
+  "DEBUG": true,
+  "LOG_FILE": "security_events.log"
+}
